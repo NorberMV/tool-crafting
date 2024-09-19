@@ -1,0 +1,5 @@
+pre-commit
+requests
+langchain
+langchain_openai
+langchain-community
