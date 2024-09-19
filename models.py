@@ -11,8 +11,12 @@ from langchain.callbacks.manager import (
 
 # Define the input schema
 class OpenMeteoInput(BaseModel):
-    latitude: float = Field(..., description="Latitude of the location to fetch weather data for")
-    longitude: float = Field(..., description="Longitude of the location to fetch weather data for")
+    latitude: float = Field(
+        ..., description="Latitude of the location to fetch weather data for"
+    )
+    longitude: float = Field(
+        ..., description="Longitude of the location to fetch weather data for"
+    )
 
 
 # class CalculatorInput(BaseModel):
@@ -43,8 +47,12 @@ class OpenMeteoInput(BaseModel):
 #         """Use the tool asynchronously."""
 #         raise NotImplementedError("Calculator does not support async")
 
+
 class CalculatorTool(BaseModel):
     """Useful when you need to answer questions about multiplications, returns an integer called 'total' from the multiplication of the two given numbers."""
+
     num_a: int = Field(description="First number")
     num_b: int = Field(description="Second number")
-    total: int = Field(description="The resulting number from the multiplication of a*b")
+    total: int = Field(
+        description="The resulting number from the multiplication of a*b"
+    )
