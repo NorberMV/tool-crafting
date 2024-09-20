@@ -31,10 +31,16 @@ chain = prompt | model | OpenAIFunctionsAgentOutputParser() | route
 if __name__ == "__main__":
     print("* The name of the tool is:")
     print(get_current_temperature.name)
+    print()
     print("* The tool description is:")
     print(get_current_temperature.description)
+    print()
     print("* The tool arguments are:")
     print(get_current_temperature.args)
+    print()
+    print("The name of the tool converted to OpenAIFunction is:")
+    print(f"{functions[0]!r}")
+    print()
     user_question = (
         "What is the weather in Lions Bay British Columbia Canada right now?"
     )
