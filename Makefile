@@ -3,3 +3,6 @@ install-requirements.local:
 
 run:
 	python main.py
+
+pre-commit:
+	pre-commit run --all-files
