@@ -15,7 +15,7 @@ model = ChatOpenAI(
     max_tokens=None,
     timeout=None,
     max_retries=2,
-).bind(functions=functions)
+).bind_functions(functions=functions)
 
 prompt = ChatPromptTemplate.from_messages(
     [
